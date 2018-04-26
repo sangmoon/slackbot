@@ -22,13 +22,13 @@ try:
                     ws.send(json.dumps({
                         'channel': response['channel'],
                         'type': 'message',
-                        'text': '`!명령어`/`준연`/`갓`/`!정보`/`!봇`',
+                        'text': '`!명령어`/`준연`/`갓`/`!정보`/`!봇`/`SAS랜덤`',
                     }))
                 elif "준연" in response['text'] or "갓" in response['text']:
                     ws.send(json.dumps({
                         'channel': response['channel'],
                         'type': 'message',
-                        'text': '`갓준연` ㅇㅈ하는 각? ㅇ ㅇㅈ!',
+                        'text': '`갓준연` ㅇㅈ하는 각? ㅇ ㅇㅈ :thumbsup_all:',
                     }))
 
                 elif response['text'].startswith('!정보'):
@@ -56,12 +56,12 @@ try:
                         'type': 'message',
                         'text': random_lst[0] + " or/and " + random_lst[1],
                     }))
-                else:
-                    ws.send(json.dumps({
-                        'channel': response['channel'],
-                        'type': 'message',
-                        'text': 'Echo: ' + response['text'],
-                    }))
+                # else:
+                #     ws.send(json.dumps({
+                #         'channel': response['channel'],
+                #         'type': 'message',
+                #         'text': 'Echo: ' + response['text'],
+                #     }))
 except KeyboardInterrupt:
     pass
 finally:
