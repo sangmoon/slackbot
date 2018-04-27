@@ -3,7 +3,10 @@
 - python3.6
 - slacker
 
-```python
+```shell
+# async 버전
 python slack_async.py
+
+# sync 버전
 python slack_sync.py
 ```
