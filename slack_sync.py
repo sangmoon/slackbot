@@ -35,7 +35,7 @@ try:
                     ws.send(json.dumps({
                         'channel': response['channel'],
                         'type': 'message',
-                        'text': '''학사 docs: https://docs.google.com/spreadsheets/d/1x5V0kc2mPzvISgOFFNNvpZ9EmvD8O6oFpk59SzKhR0E/edit#gid=1175884065 \n 레드마인 : http://192.168.2.185:2222/ \n 소프트 세미나: http://192.168.15.58/mediawiki/index.php/SoftPM/Soft_%EC%84%B8%EB%AF%B8%EB%82%98  \n 클라우드실 교육자료 : http://192.168.2.185:2222/projects/temp/wiki/%EC%97%B0%EA%B5%AC%EC%86%8C_%EA%B3%B5%ED%86%B5_%EA%B5%90%EC%9C%A1_%EB%B0%8F_%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC \n PAS실 자료 http://192.168.2.175:10080/cloud3/ProObjectPlus/wikis/home''',
+                        'text': '''레드마인 : http://192.168.2.185:2222/ \n 소프트 세미나: http://192.168.15.58/mediawiki/index.php/SoftPM/Soft_%EC%84%B8%EB%AF%B8%EB%82%98  \n 클라우드실 교육자료 : http://192.168.2.185:2222/projects/temp/wiki/%EC%97%B0%EA%B5%AC%EC%86%8C_%EA%B3%B5%ED%86%B5_%EA%B5%90%EC%9C%A1_%EB%B0%8F_%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC \n PAS실 자료 http://192.168.2.175:10080/cloud3/ProObjectPlus/wikis/home''',
                     }))
                 elif "!봇" == response['text']:
                     ws.send(json.dumps({
