@@ -5,7 +5,7 @@ from pprint import pprint
 import json
 import random
 
-
+# async
 TOKEN = config("API_TOKEN")
 slack = Slacker(TOKEN)
 response = slack.rtm.start()
