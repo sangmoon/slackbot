@@ -1,11 +1,10 @@
 from slacker import Slacker
 from decouple import config
 import websocket
-from pprint import pprint
 import json
 import random
 
-# async
+# sync
 TOKEN = config("API_TOKEN")
 slack = Slacker(TOKEN)
 response = slack.rtm.start()
@@ -56,12 +55,9 @@ try:
                         'type': 'message',
                         'text': random_lst[0] + " or/and " + random_lst[1],
                     }))
-                # else:
-                #     ws.send(json.dumps({
-                #         'channel': response['channel'],
-                #         'type': 'message',
-                #         'text': 'Echo: ' + response['text'],
-                #     }))
+                else:
+                    pass
+
 except KeyboardInterrupt:
     pass
 finally:

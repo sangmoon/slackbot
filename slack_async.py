@@ -3,7 +3,6 @@ import json
 from slacker import Slacker
 import websockets
 from decouple import config
-from pprint import pprint
 
 
 async def bot(token):
