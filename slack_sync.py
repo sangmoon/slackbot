@@ -55,6 +55,16 @@ try:
                         'type': 'message',
                         'text': random_lst[0] + " or/and " + random_lst[1],
                     }))
+
+                elif "subject" or "서브젝트" or "서브잭트" in response['text']:
+                    ws.send(json.dumps({
+                        'channel': response['channel'],
+                        'type': 'message',
+                        'text': '''
+                                `서브젝트` 말고 `클래스` 로 통일하여 사용하자구요! :woman-gesturing-no:
+                                ''',
+                    }))
+
                 else:
                     pass
 
