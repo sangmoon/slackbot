@@ -56,7 +56,7 @@ try:
                         'text': random_lst[0] + " or/and " + random_lst[1],
                     }))
 
-                elif "subject" or "서브젝트" or "서브잭트" in response['text']:
+                elif any(word in response['text'] for word in ["subject", "서브젝트", "서브잭트"]):
                     ws.send(json.dumps({
                         'channel': response['channel'],
                         'type': 'message',
