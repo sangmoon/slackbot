@@ -21,7 +21,7 @@ try:
                     ws.send(json.dumps({
                         'channel': response['channel'],
                         'type': 'message',
-                        'text': '`!명령어`/`준연`/`갓`/`!정보`/`!봇`/`SAS랜덤`',
+                        'text': '`!명령어`/`!정보`/`!봇`/`SAS랜덤`',
                     }))
                 elif "준연" in response['text'] or "갓" in response['text']:
                     ws.send(json.dumps({
