@@ -1,8 +1,7 @@
 import time
 import math
 import random
-#from slacker import Slacker
-#slack = Slacker(TOKEN)
+from slacker import Slacker
 
 '''
 int getIndex(size, mon, day)
@@ -13,7 +12,6 @@ input
 output
 	generated integer index
 '''
-
 def getIndex(size, mon, day):
 	section_size = math.ceil(size / 31.0)
 	section_idx = mon % section_size
@@ -31,6 +29,9 @@ def getIndex(size, mon, day):
 			#print "size <= temp", index
 	return int(index)
 
+token = 'TOKEN'
+slack = Slacker(token)
+
 now = time.localtime()
 
 with open("./phrase.txt", "r") as f:
@@ -38,6 +39,7 @@ with open("./phrase.txt", "r") as f:
 	psize=len(lines) #phrase size
 	select_idx = getIndex(psize, now.tm_mon, now.tm_mday)
 	#print psize, select_idx
-	print lines[select_idx]
+	message = lines[select_idx]
 
 #send to slack bot
+slack.chat.post_message('#hagsa', message, as_user=True)
