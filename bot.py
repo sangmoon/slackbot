@@ -31,7 +31,8 @@ class BotBase:
         text = kwargs.pop('text', '')
 
         if user and text and text.startswith('!'):
-            cmd, query = text[1:].split(':', 1)
+            cmd = text[1:]
+            query = ""
             fn_name = 'cmd_' + cmd
             fn = getattr(self, fn_name, None)
             if callable(fn):
