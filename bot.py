@@ -50,7 +50,7 @@ class BotBase:
         try:
             while True:
                 response = self.recv()
-                print(response)
+                # print(response)
                 if 'type' in response:
                     fn_name = 'on_' + response.pop('type')
                     fn = getattr(self, fn_name, None)
