@@ -38,7 +38,7 @@ class BotBase:
             if callable(fn):
                 fn(channel, user, query)
             else:
-                self.post_messaege(channel, "지원하지 않는 명령어 입니다.")
+                self.post_message(channel, "지원하지 않는 명령어 입니다.")
 
     def post_message(self, channel, text):
         self.send({
